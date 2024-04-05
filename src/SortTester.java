@@ -43,6 +43,30 @@ public class SortTester {
     String[] expected = { "alpha", "bravo", "charlie", "delta", "foxtrot" };
     sorter.sort(original, (x, y) -> x.compareTo(y));
     assertArrayEquals(original, expected);
-  } // orderedStringTest
+  } // reverseOrderedStringTest
+
+  @Test
+  public void orderedIntegerTest() {
+    Integer[] original = { 1, 6, 7, 10, 99 };
+    Integer[] expected = original.clone();
+    sorter.sort(original, (x, y) -> x.compareTo(y));
+    assertArrayEquals(original, expected);
+  } // orderedIntegerTest
+
+  @Test
+  public void reverseIntegerStringTest() {
+    Integer[] original = { 99, 10, 7,6, 1 };
+    Integer[] expected = { 1, 6, 7, 10, 99 };
+    sorter.sort(original, (x, y) -> x.compareTo(y));
+    assertArrayEquals(original, expected);
+  } // reverseIntegerStringTest
+
+  @Test
+  public void emptyArrayTest() {
+    String[] original = {};
+    String[] expected = {};
+    sorter.sort(original, (x, y) -> x.compareTo(y));
+    assertArrayEquals(expected, original);
+  }// emptyArrayTest
 
 } // class SortTester
