@@ -45,5 +45,5 @@ public class InsertionSort implements Sorter {
     T temp = values[i];
     values[i] = values[j];
     values[j] = temp;
-  }
+  } // swap(T[] values, int i, int j) {
 } // class InsertionSort

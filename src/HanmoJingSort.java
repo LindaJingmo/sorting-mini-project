@@ -54,7 +54,7 @@ public class HanmoJingSort implements Sorter {
         merge(values, order, left, mid, right);
       }
     }
-  }
+  } // sort(T[] values, Comparator<? super T> order) {
 
   private <T> void InsertionSort(T[] values, Comparator<? super T> order, int left, int right) {
     for (int i = left + 1; i <= right; i++) {
@@ -66,7 +66,7 @@ public class HanmoJingSort implements Sorter {
       }
       values[j + 1] = key;
     }
-  }
+  } // InsertionSort(T[] values, Comparator<? super T> order, int left, int right) {
 
   private <T> void merge(T[] values, Comparator<? super T> order, int left, int mid, int right) {
     if (order.compare(values[mid], values[mid + 1]) <= 0) {

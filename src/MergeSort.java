@@ -34,7 +34,7 @@ public class MergeSort implements Sorter {
   @Override
   public <T> void sort(T[] values, Comparator<? super T> order) {
     sort(values, 0, values.length, order);
-  }
+  } // sort(T[] values, Comparator<? super T> order) {
 
   static <T> void sort(T[] values, int lo, int hi, Comparator<? super T> order) {
     if (hi - lo <= 1) {
@@ -44,7 +44,7 @@ public class MergeSort implements Sorter {
     sort(values, lo, mid, order);
     sort(values, mid, hi, order);
     merge(values, lo, mid, hi, order); 
-  }
+  } // sort(T[] values, int lo, int hi, Comparator<? super T> order) 
 
   /**
    * Merge the values from positions [lo..mid) and [mid..hi) back into
@@ -82,5 +82,5 @@ public class MergeSort implements Sorter {
       i++;
       k++;
     }
-  } // merge
+  } // merge(T[] values, int lo, int mid, int hi, Comparator<? super T> comparator) 
 }
